@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>response table</title>
+		<style>
+			table{
+				border:solid 1px #ccc;
+				width:100%;
+				margin:0;
+				padding:0;
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			table tr{
+				border:solid 1px #ccc;
+				padding:5px;
+			}
+			table th,table td{
+				text-align:center;
+			}
+			@media only screen and (max-width: 414px) {
+				table{
+					border:0;
+				}
+				table tr{
+					border:solid 1px #ccc;
+					display: block;
+					margin-bottom:10px;
+				}
+				table td{
+					display:block;
+					text-align:right;
+					border-bottom:solid 1px #ccc;
+				}
+				table thead{
+					display:none;
+				}
+				table td:before{
+					content: attr(data-label);
+					float:left;
+				}
+				table td:last-child{
+					border-bottom:none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>年龄</th>
+					<th>时间</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="姓名">lele</td>
+					<td data-label="性别">F</td>
+					<td data-label="年龄">14</td>
+					<td data-label="时间">20141002</td>
+				</tr>
+				<tr>
+					<td data-label="姓名">xinxi</td>
+					<td data-label="性别">M</td>
+					<td data-label="年龄">1</td>
+					<td data-label="时间">21456</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
